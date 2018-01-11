@@ -11,7 +11,12 @@
 #include "bipartite.hpp"
 using namespace std;
 
-int main() {
+/*int main() {
 	assert(ns_bipartite::test());
 	return 0;
+}*/
+
+TEST(mimi, Test1){
+	ASSERT_EQ(100, 100);
 }
+

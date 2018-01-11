@@ -36,7 +36,6 @@
 
 #include <utility>
 
-
 // Memory Management
 #include <memory>
 
@@ -64,28 +63,28 @@
 using namespace std;
 using namespace std::chrono;
 
-
-using VB  = vector<bool>;
+using VB = vector<bool>;
 using VVB = vector<VB>;
-using VS  = vector<string>;
+using VS = vector<string>;
 using VVS = vector<VS>;
 using VII = vector<pair<int,int>>;
 using VVI = vector<vector<int>>;
 
-
 typedef struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode *l;
-    TreeNode *r;
-    TreeNode(int x) : val(x), left(NULL), right(NULL), l(left), r(right) {}
+  int val;
+  TreeNode *left;
+  TreeNode *right;
+  TreeNode *l;
+  TreeNode *r;
+  TreeNode(int x) :
+      val(x), left(NULL), right(NULL), l(left), r(right) {
+  }
 } TreeNode;
 
-typedef struct Point{
+typedef struct Point {
   int x, y;
 } Point;
 
-
+#include <gtest/gtest.h>
 
 #endif /* PNSEI_HPP_ */
