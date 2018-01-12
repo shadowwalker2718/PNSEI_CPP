@@ -11,9 +11,10 @@ namespace lc_694_Number_of_Distinct_Islands {
 
 class Solution {
 public:
-  // T: O(*), S: O(*)
+
+#if 1
+  // T: O(R*C), S: O(*)
   int numDistinctIslands(vector<vector<int>>& grid) {
-    int r = 0;
     if (grid.empty() or grid[0].empty())
       return 0;
     vector<pair<int, int>> dir = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
@@ -39,7 +40,7 @@ public:
                   and !visited[nx][ny]) {
                 visited[nx][ny] = true; ////
                 if (grid[nx][ny] == 1)
-                  q.push( { nx, ny }), ids.back_back({nx, ny});
+                  q.push( { nx, ny }), ids.push_back({nx, ny});
               }
             }
           }
@@ -53,6 +54,11 @@ public:
     }
     return svi.size();
   }
+#elif defined(__DFS__)
+
+  // Can be done in DFS, just record the directions like "ulllldrr"
+
+#endif
 };
 
 TEST(lc_694_Number_of_Distinct_Islands_C1, lc_694_Number_of_Distinct_Islands_T) {

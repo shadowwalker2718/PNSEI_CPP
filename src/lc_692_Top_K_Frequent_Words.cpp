@@ -42,7 +42,7 @@ TEST(lc_692_Top_K_Frequent_Words_C1, lc_692_Top_K_Frequent_Words_T) {
 	vector<string> vi = { "i", "love", "code", "i", "love", "coding" };
 	auto r = sln.topKFrequent(vi, 2);
 	ASSERT_EQ(r[0], "i");
-	ASSERT_EQ(r[2], "love");
+	ASSERT_EQ(r[1], "love");
 }
 
 }
